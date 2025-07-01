@@ -1,0 +1,160 @@
+/* Navbar container and positioning */
+.navbar {
+  background-color: #2563eb; /* fixed light blue background */
+  color: white; /* fixed white text */
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  transition: none; /* no transition needed since colors are fixed */
+}
+
+/* Inner container for consistent max width and horizontal padding */
+.navbar-container {
+  max-width: 1120px; /* similar to max-w-7xl */
+  margin: 0 auto;
+  padding: 0 16px; /* px-4 */
+}
+
+/* Flex container for navbar content */
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px; /* h-16 */
+}
+
+/* Brand / Logo */
+.navbar-brand span {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 700;
+  color: white; /* fixed white text */
+  transition: none;
+}
+
+/* Desktop menu links */
+.navbar-menu-desktop {
+  display: none; /* hidden on mobile */
+  gap: 32px; /* space-x-8 */
+  align-items: center;
+}
+
+.navbar-link {
+  color: white; /* fixed white */
+  padding: 8px 12px; /* py-2 px-3 */
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #93c5fd; /* lighter blue on hover */
+}
+
+/* Mobile menu button */
+.navbar-menu-mobile-button {
+  display: flex;
+  align-items: center;
+}
+
+/* Hamburger menu button */
+.menu-button {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  color: white; /* fixed white */
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.menu-button:hover {
+  color: #93c5fd; /* lighter blue */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-button:focus {
+  outline: 2px solid #93c5fd; /* lighter blue */
+  outline-offset: 2px;
+}
+
+/* Mobile menu dropdown */
+.navbar-menu-mobile {
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  background-color: #2563eb; /* fixed light blue */
+  transition: none;
+}
+
+.navbar-menu-mobile-links {
+  padding: 8px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* space-y-1 */
+}
+
+/* Mobile menu links */
+.navbar-link-mobile {
+  color: white; /* fixed white */
+  padding: 8px 12px;
+  font-weight: 500;
+  font-size: 1rem; /* base */
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.3s ease;
+}
+
+.navbar-link-mobile:hover {
+  color: #93c5fd; /* lighter blue */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive: show desktop menu from md (768px) and hide mobile button */
+@media (min-width: 768px) {
+  .navbar-menu-desktop {
+    display: flex;
+  }
+  .navbar-menu-mobile-button {
+    display: none;
+  }
+}
+
+/* Theme toggle button (desktop) */
+.theme-toggle-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white; /* fixed white */
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  margin-left: 16px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-toggle-button:hover {
+  color: #93c5fd;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Theme toggle button (mobile) */
+.theme-toggle-button-mobile {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white; /* fixed white */
+  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.theme-toggle-button-mobile:hover {
+  color: #93c5fd;
+  background-color: rgba(255, 255, 255, 0.1);
+}

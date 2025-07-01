@@ -1,0 +1,202 @@
+.hero-section {
+  padding: 80px 20px;
+  background: var(--color-bg); /* default for dark mode */
+}
+
+/* Gradient only in light mode */
+html:not([data-theme='dark']) .hero-section {
+  background: linear-gradient(90deg, var(--color-bg-light-start), var(--color-bg-light-end));
+}
+
+.hero-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    gap: 60px;
+  }
+}
+
+.hero-text {
+  flex: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-text {
+    text-align: left;
+    margin-right: 40px;
+  }
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.hero-description {
+  color: var(--color-text-secondary);
+  max-width: 500px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .hero-description {
+    margin-left: 0;
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+}
+
+.btn {
+  padding: 12px 24px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+  user-select: none;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text, white);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background-color: var(--color-btn-secondary-bg, white);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-btn-secondary-hover-bg, var(--color-bg-light-end));
+}
+
+/* Outline Button (Download CV) */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-btn-secondary-hover-bg, var(--color-bg-light-end));
+  color: var(--color-primary-hover);
+}
+
+.hero-image-wrapper {
+  flex: 0 0 40%;
+  max-width: 350px;
+}
+
+.hero-image-container {
+  background: var(--color-card-bg);
+  padding: 8px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px var(--color-card-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.scroll-down {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-down-button {
+  width: 48px;
+  height: 48px;
+  background: var(--color-card-bg);
+  border-radius: 50%;
+  box-shadow: 0 4px 6px var(--color-card-shadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.scroll-down-button:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(3px);
+}
+
+.scroll-icon {
+  color: var(--color-primary);
+}

@@ -1,0 +1,124 @@
+.skills-section {
+  padding: 80px 20px;
+  background-color: var(--color-bg); /* ✅ Dynamic background */
+}
+
+.skills-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.skills-title {
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  color: var(--color-text); /* ✅ Dynamic text */
+  margin: 0 0 16px 0;
+}
+
+.skills-underline {
+  height: 4px;
+  background-color: var(--color-primary); /* ✅ Uses theme primary */
+  margin: 0 auto;
+  border-radius: 2px;
+  width: 80px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill-card {
+  background-color: var(--color-card-bg); /* ✅ Dynamic card bg */
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 1px 3px var(--color-card-shadow); /* ✅ Dynamic shadow */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card:hover {
+  box-shadow: 0 4px 10px var(--color-card-shadow); /* ✅ Dark mode safe */
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.skill-icon-wrapper {
+  background-color: var(--color-tag-bg); /* ✅ Uses tag bg for icon */
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-blue {
+  color: var(--color-primary); /* ✅ Dynamic icon color */
+}
+
+.skill-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-left: 16px;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.skill-name {
+  color: var(--color-text); /* ✅ Main text */
+}
+
+.skill-level {
+  color: var(--color-text-secondary); /* ✅ Subtext */
+}
+
+.skill-bar-bg {
+  width: 100%;
+  height: 8px;
+  background-color: #e5e7eb; /* gray-200: You can customize with a new variable */
+  border-radius: 9999px;
+  overflow: hidden;
+}
+
+.skill-bar-fg {
+  height: 8px;
+  background-color: var(--color-primary); /* ✅ Progress bar uses theme color */
+  border-radius: 9999px;
+  width: 0;
+}
