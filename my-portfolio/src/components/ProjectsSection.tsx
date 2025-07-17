@@ -57,7 +57,7 @@ const projects = [
       'https://imgur.com/5l8qi2O.jpg',
     tags: ['MERN Stack', 'JavaScript', 'JSP', 'TailwindCSS'],
     liveLink: '#',
-    repoLink: 'https://github.com/UsharaChamudithaKumara',
+    repoLink: 'https://github.com/UsharaChamudithaKumara/RestaurantManagementSystem',
   },
   {
     id: 5,
@@ -70,7 +70,19 @@ const projects = [
     liveLink: 'https://youtu.be/q82cup3Avvk?si=AtzM24cAsicqM1U3',
     repoLink: 'https://github.com/UsharaChamudithaKumara/ExpenseTrackerApp',
   },
+  {
+    id: 6,
+    title: 'User Authentication System',
+    description:
+      'Secure registration and login system using PHP, MySQL, and JavaScript. Includes session management and form validation.',
+    image:
+      'https://imgur.com/tyFBSYX.jpg', 
+    tags: ['PHP', 'MySQL', 'JavaScript', 'HTML', 'CSS'],
+    liveLink: '#', // Optional: If hosted somewhere
+    repoLink: 'https://github.com/UsharaChamudithaKumara/AuthenticationProject', 
+  },
 ];
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
